@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -11,16 +11,98 @@
     <!-- custom css -->
     <link rel="stylesheet" href="styles/style.css">
 </head>
-<body>
-    <section class="home">
 
-    </section>
-    <section class="play-ground">
+<body class="font-poppins">
+    <main class="min-h-screen bg-[#010313] bg-[url(images/background.png)] bg-no-repeat bg-center">
+        <!-- home screen -->
+        <section id="home-screen" class="min-h-screen text-white flex justify-center items-center">
+            <div class="flex flex-col items-center gap-9">
+                <h1 class="text-9xl font-anton uppercase text">Alphabet Clash</h1>
+                <p class="text-2xl font-medium">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
+                <button onclick="play()" id="play-btn" class="btn bg-white text-black text-2xl">Play Now</button>
+            </div>
+        </section>
+        <!-- playground start -->
+        <section id="play-ground" class="hidden">
+            <div class="flex flex-col items-center gap-5">
+                <!-- screen -->
+                <div class="flex flex-col items-center artboard artboard-horizontal phone-6 border-[20px] rounded-2xl border-[#010313CC] bg-[#FFFFFFB3] mt-14">
+                    <div class="flex justify-center">
+                        <p class="bg-[#2F2941] px-6 pb-4 rounded-b-xl text-white select-none">Don't watch keyboard while playing...
+                        </p>
+                    </div>
+                    <div class="flex justify-center items-center h-full">
+                        <p id="current-alpha" class="text-[#010313] text-9xl font-semibold uppercase select-none">Y</p>
+                    </div>
+                </div>
+                <!-- keyboard start-->
+                <div>
+                    <div class="flex justify-center gap-1 my-1 w-full">
+                        <kbd id="w" class="kbd font-inter font-medium select-none">w</kbd>
+                        <kbd id="e" class="kbd font-inter font-medium select-none">e</kbd>
+                        <kbd id="r" class="kbd font-inter font-medium select-none">r</kbd>
+                        <kbd id="q" class="kbd font-inter font-medium select-none">q</kbd>
+                        <kbd id="t" class="kbd font-inter font-medium select-none">t</kbd>
+                        <kbd id="y" class="kbd font-inter font-medium select-none">y</kbd>
+                        <kbd id="u" class="kbd font-inter font-medium select-none">u</kbd>
+                        <kbd id="i" class="kbd font-inter font-medium select-none">i</kbd>
+                        <kbd id="o" class="kbd font-inter font-medium select-none">o</kbd>
+                        <kbd id="p" class="kbd font-inter font-medium select-none">p</kbd>
+                    </div>
+                    <div class="flex justify-center gap-1 my-1 w-full">
+                        <kbd id="a" class="kbd font-inter font-medium select-none">a</kbd>
+                        <kbd id="s" class="kbd font-inter font-medium select-none">s</kbd>
+                        <kbd id="d" class="kbd font-inter font-medium select-none">d</kbd>
+                        <kbd id="f" class="kbd font-inter font-medium select-none">f</kbd>
+                        <kbd id="g" class="kbd font-inter font-medium select-none">g</kbd>
+                        <kbd id="h" class="kbd font-inter font-medium select-none">h</kbd>
+                        <kbd id="j" class="kbd font-inter font-medium select-none">j</kbd>
+                        <kbd id="k" class="kbd font-inter font-medium select-none">k</kbd>
+                        <kbd id="l" class="kbd font-inter font-medium select-none">l</kbd>
+                    </div>
+                    <div class="flex justify-center gap-1 my-1 w-full">
+                        <kbd id="z" class="kbd font-inter font-medium select-none">z</kbd>
+                        <kbd id="x" class="kbd font-inter font-medium select-none">x</kbd>
+                        <kbd id="c" class="kbd font-inter font-medium select-none">c</kbd>
+                        <kbd id="v" class="kbd font-inter font-medium select-none">v</kbd>
+                        <kbd id="b" class="kbd font-inter font-medium select-none">b</kbd>
+                        <kbd id="n" class="kbd font-inter font-medium select-none">n</kbd>
+                        <kbd id="m" class="kbd font-inter font-medium select-none">m</kbd>
+                        <kbd id="/" class="kbd font-inter font-medium select-none">/</kbd>
+                    </div>
+                </div>
+                <!-- keyboard end -->
 
-    </section>
-    <section class="score">
+                <!-- life line -->
+                <div class="flex justify-between w-3/4">
+                    <button class="btn rounded-full bg-[#894189] border-none text-white px-4">
+                        <span class="font-inter">Life</span>
+                        <img src="images/life.svg" alt="">
+                        <span class="font-inter">1</span>
+                    </button>
+                    <button class="btn text-white rounded-full border-none bg-[#360490] px-4">
+                        <span class="font-inter">Score</span>
+                        <img src="images/dollar.svg" alt="">
+                        <span class="font-inter">1</span>
+                    </button>
+                </div>
+        </section>
+        </div>
 
-    </section>
+        <!-- playground end -->
+        <section class="score min-h-screen flex justify-center items-center hidden">
+            <div class="text-white text-center space-y-6 bg-[#FFFFFF33] p-6 rounded-xl">
+                <h1 class="text-8xl">
+                    <span class="font-extrabold">Score:</span>
+                    <span>14</span>
+                </h1>
+                <button class="btn bg-white text-black outline-0">Play Again</button>
+                <p>Practice will make you Pro</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/utility.js"></script>
     <script src="js/script.js"></script>
 </body>
 
